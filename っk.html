@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เฉลยแบบฝึกหัด: ทศนิยมและการบวกลบ - เฉลย Hub</title>
+    <title>รวมเฉลยแบบฝึกหัด: ทศนิยมและการดำเนินการ - เฉลย Hub</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -17,7 +17,7 @@
                 fontCache: 'global'
             },
             options: {
-                ignoreHtmlClass: 'solution-content hidden' // Ignore elements with this class
+                ignoreHtmlClass: 'solution-content hidden'
             }
         };
     </script>
@@ -38,14 +38,14 @@
             --color-bistre: #2e1e0f;
 
             /* Assign primary/secondary/accent colors from your palette */
-            --primary-color: var(--color-burgundy); /* Burgundy for main elements */
-            --secondary-color: var(--color-redwood); /* Redwood for accents/buttons */
-            --text-color: var(--color-bistre); /* Bistre for general text for good contrast */
-            --light-text-color: var(--color-ash-gray); /* Ash gray for lighter text */
-            --bg-color: var(--color-ash-gray); /* Ash gray for subtle background */
-            --card-bg: #ffffff; /* White for card backgrounds to stand out */
-            --border-color: var(--color-battleship-gray); /* Battleship gray for borders */
-            --solution-bg: #fdf2f2; /* A very light tint based on redwood/burgundy */
+            --primary-color: var(--color-burgundy);
+            --secondary-color: var(--color-redwood);
+            --text-color: var(--color-bistre);
+            --light-text-color: var(--color-ash-gray);
+            --bg-color: var(--color-ash-gray);
+            --card-bg: #ffffff;
+            --border-color: var(--color-battleship-gray);
+            --solution-bg: #fdf2f2;
             --shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
@@ -323,12 +323,14 @@
         }
 
         .solution-content pre {
-            background-color: #f0f0f0; /* Light gray for code/calculation blocks */
+            background-color: #f0f0f0;
             padding: 10px;
             border-radius: 5px;
-            overflow-x: auto; /* Allow horizontal scrolling for wide code */
-            font-family: monospace; /* Monospace font for calculations */
-            white-space: pre-wrap; /* Preserve whitespace and wrap long lines */
+            overflow-x: auto;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
 
         /* Navigation Buttons */
@@ -471,14 +473,27 @@
             <a href="/">หน้าแรก</a> &gt;
             <a href="/math">คณิตศาสตร์</a> &gt;
             <a href="#">ทศนิยม</a> &gt;
-            แบบฝึกหัด 5.1
+            รวมแบบฝึกหัด
         </nav>
 
         <section class="solution-container">
             <aside class="sidebar">
                 <h3>สารบัญข้อ</h3>
                 <ul class="question-list">
-                    <li class="active"><a href="#question-5-1-1">ข้อ 5.1.1</a></li>
+                    <h4>แบบฝึกหัด 2.1: รูปกระจาย</h4>
+                    <li><a href="#question-2-1-1">ข้อ 2.1.1</a></li>
+                    <li><a href="#question-2-1-2">ข้อ 2.1.2</a></li>
+                    <li><a href="#question-2-1-3">ข้อ 2.1.3</a></li>
+                    <li><a href="#question-2-1-4">ข้อ 2.1.4</a></li>
+                    <h4>แบบฝึกหัด 2.2: ค่าประจำหลัก</h4>
+                    <li><a href="#question-2-2-1">ข้อ 2.2.1</a></li>
+                    <li><a href="#question-2-2-2">ข้อ 2.2.2</a></li>
+                    <li><a href="#question-2-2-3">ข้อ 2.2.3</a></li>
+                    <li><a href="#question-2-2-4">ข้อ 2.2.4</a></li>
+                    <li><a href="#question-2-2-5">ข้อ 2.2.5</a></li>
+                    <li><a href="#question-2-2-6">ข้อ 2.2.6</a></li>
+                    <h4>แบบฝึกหัด 5.1: การบวกและลบ</h4>
+                    <li><a href="#question-5-1-1">ข้อ 5.1.1</a></li>
                     <li><a href="#question-5-1-2">ข้อ 5.1.2</a></li>
                     <li><a href="#question-5-1-3">ข้อ 5.1.3</a></li>
                     <li><a href="#question-5-1-4">ข้อ 5.1.4</a></li>
@@ -491,7 +506,159 @@
             </aside>
 
             <div class="content-area">
-                <h1>เฉลยแบบฝึกหัด: การบวกและลบทศนิยม</h1>
+                <h1>รวมเฉลยแบบฝึกหัด: ทศนิยมและการดำเนินการ</h1>
+
+                <hr>
+                <h2>แบบฝึกหัด 2.1: การเขียนในรูปกระจาย</h2>
+                <hr>
+
+                <article class="question-block" id="question-2-1-1">
+                    <h2 class="question-number">ข้อ 2.1.1</h2>
+                    <div class="problem">
+                        <p>จงเขียน $0.35$ ให้อยู่ในรูปกระจาย</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$0.35 = \left(3 \times \frac{1}{10}\right) + \left(5 \times \frac{1}{100}\right)$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-1-2">
+                    <h2 class="question-number">ข้อ 2.1.2</h2>
+                    <div class="problem">
+                        <p>จงเขียน $87.03$ ให้อยู่ในรูปกระจาย</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$87.03 = \left(8 \times 10\right) + \left(7 \times 1\right) + \left(0 \times \frac{1}{10}\right) + \left(3 \times \frac{1}{100}\right)$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-1-3">
+                    <h2 class="question-number">ข้อ 2.1.3</h2>
+                    <div class="problem">
+                        <p>จงเขียน $16.124$ ให้อยู่ในรูปกระจาย</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$16.124 = \left(1 \times 10\right) + \left(6 \times 1\right) + \left(1 \times \frac{1}{10}\right) + \left(2 \times \frac{1}{100}\right) + \left(4 \times \frac{1}{1000}\right)$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-1-4">
+                    <h2 class="question-number">ข้อ 2.1.4</h2>
+                    <div class="problem">
+                        <p>จงเขียน $90.6705$ ให้อยู่ในรูปกระจาย</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$90.6705 = \left(9 \times 10\right) + \left(0 \times 1\right) + \left(6 \times \frac{1}{10}\right) + \left(7 \times \frac{1}{100}\right) + \left(0 \times \frac{1}{1000}\right) + \left(5 \times \frac{1}{10000}\right)$$
+                        </div>
+                    </div>
+                </article>
+
+                <hr>
+                <h2>แบบฝึกหัด 2.2: ค่าประจำหลักของเลขโดด</h2>
+                <hr>
+
+                <article class="question-block" id="question-2-2-1">
+                    <h2 class="question-number">ข้อ 2.2.1</h2>
+                    <div class="problem">
+                        <p>เลขโดด 8 ใน $81.54$ มีค่าประจำหลักเท่าใด</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$\text{เลขโดด 8 ใน } 81.54 \text{ มีค่าประจำหลักเป็น } 10$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-2-2">
+                    <h2 class="question-number">ข้อ 2.2.2</h2>
+                    <div class="problem">
+                        <p>เลขโดด 8 ใน $2.281$ มีค่าประจำหลักเท่าใด</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$\text{เลขโดด 8 ใน } 2.281 \text{ มีค่าประจำหลักเป็น } \frac{1}{100}$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-2-3">
+                    <h2 class="question-number">ข้อ 2.2.3</h2>
+                    <div class="problem">
+                        <p>เลขโดด 8 ใน $134.8$ มีค่าประจำหลักเท่าใด</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$\text{เลขโดด 8 ใน } 134.8 \text{ มีค่าประจำหลักเป็น } \frac{1}{10}$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-2-4">
+                    <h2 class="question-number">ข้อ 2.2.4</h2>
+                    <div class="problem">
+                        <p>เลขโดด 8 ใน $21.978$ มีค่าประจำหลักเท่าใด</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$\text{เลขโดด 8 ใน } 21.978 \text{ มีค่าประจำหลักเป็น } \frac{1}{1000}$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-2-5">
+                    <h2 class="question-number">ข้อ 2.2.5</h2>
+                    <div class="problem">
+                        <p>เลขโดด 8 ใน $18.04$ มีค่าประจำหลักเท่าใด</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$\text{เลขโดด 8 ใน } 18.04 \text{ มีค่าประจำหลักเป็น } 1$$
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-2-2-6">
+                    <h2 class="question-number">ข้อ 2.2.6</h2>
+                    <div class="problem">
+                        <p>เลขโดด 4 ใน $0.0048$ มีค่าประจำหลักเท่าใด</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>เฉลย:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            $$\text{เลขโดด 4 ใน } 0.0048 \text{ มีค่าประจำหลักเป็น } \frac{1}{1000}$$
+                        </div>
+                    </div>
+                </article>
+
+                <hr>
+                <h2>แบบฝึกหัด 5.1: การบวกและลบทศนิยม</h2>
+                <hr>
 
                 <article class="question-block" id="question-5-1-1">
                     <h2 class="question-number">ข้อ 5.1.1</h2>
@@ -513,7 +680,7 @@
 - 2.987
 -------
   0.114</pre>
-                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $3.101$ มีค่าสัมบูรณ์มากกว่า $2.987$ และมีเครื่องหมายเป็นลบ ดังนั้นผลลัพธ์ที่ได้จะเป็นลบ</p>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก **3.101** มีค่าสัมบูรณ์มากกว่า **2.987** และมีเครื่องหมายเป็นลบ ดังนั้นผลลัพธ์ที่ได้จะเป็นลบ</p>
                             <p>**คำตอบ:** $\mathbf{-0.114}$</p>
                         </div>
                     </div>
@@ -539,7 +706,7 @@
 - 0.205
 -------
   1.590</pre>
-                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $1.795$ มีค่าสัมบูรณ์มากกว่า $0.205$ และมีเครื่องหมายเป็นบวก ดังนั้นผลลัพธ์ที่ได้จะเป็นบวก</p>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก **1.795** มีค่าสัมบูรณ์มากกว่า **0.205** และมีเครื่องหมายเป็นบวก ดังนั้นผลลัพธ์ที่ได้จะเป็นบวก</p>
                             <p>**คำตอบ:** $\mathbf{1.590}$ หรือ $\mathbf{1.59}$</p>
                         </div>
                     </div>
@@ -587,7 +754,7 @@
 - 18.925
 --------
   17.775</pre>
-                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $36.7$ มีค่าสัมบูรณ์มากกว่า $18.925$ และมีเครื่องหมายเป็นลบ ดังนั้นผลลัพธ์ที่ได้จะเป็นลบ</p>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก **36.7** มีค่าสัมบูรณ์มากกว่า **18.925** และมีเครื่องหมายเป็นลบ ดังนั้นผลลัพธ์ที่ได้จะเป็นลบ</p>
                             <p>**คำตอบ:** $\mathbf{-17.775}$</p>
                         </div>
                     </div>
@@ -609,7 +776,7 @@
 -  75.025
 ---------
    24.975</pre>
-                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $100$ มีค่าสัมบูรณ์มากกว่า $75.025$ และมีเครื่องหมายเป็นบวก ดังนั้นผลลัพธ์ที่ได้จะเป็นบวก</p>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก **100** มีค่าสัมบูรณ์มากกว่า **75.025** และมีเครื่องหมายเป็นบวก ดังนั้นผลลัพธ์ที่ได้จะเป็นบวก</p>
                             <p>**คำตอบ:** $\mathbf{24.975}$</p>
                         </div>
                     </div>
@@ -727,12 +894,11 @@
 
                         // Trigger MathJax typesetting ONLY when solution becomes visible
                         if (!solutionContent.classList.contains('hidden')) {
-                            // Delay MathJax typesetting slightly to ensure elements are fully rendered
                             setTimeout(() => {
                                 MathJax.typesetPromise([solutionContent]).then(() => {
                                     // Optional: Adjust scroll if new content pushes it down
                                 }).catch((err) => console.log('MathJax typesetting failed:', err.message));
-                            }, 50); // Small delay
+                            }, 50);
                         }
                     }
                 });
