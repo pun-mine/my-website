@@ -606,6 +606,15 @@
                     <li><a href="#question-6-1-6">ข้อ 6.1.6</a></li>
                     <li><a href="#question-6-1-7-a">ข้อ 6.1.7 (1)</a></li>
                     <li><a href="#question-6-1-7-b">ข้อ 6.1.7 (2)</a></li>
+                    <h4>แบบฝึกหัด 7.2: การบวกและลบทศนิยม (โจทย์ผสม)</h4>
+                    <li><a href="#question-7-2-1">ข้อ 7.2.1</a></li>
+                    <li><a href="#question-7-2-2">ข้อ 7.2.2</a></li>
+                    <li><a href="#question-7-2-3">ข้อ 7.2.3</a></li>
+                    <li><a href="#question-7-2-4">ข้อ 7.2.4</a></li>
+                    <li><a href="#question-7-2-5">ข้อ 7.2.5</a></li>
+                    <li><a href="#question-7-2-6">ข้อ 7.2.6</a></li>
+                    <li><a href="#question-7-2-7">ข้อ 7.2.7</a></li>
+                    <li><a href="#question-7-2-8">ข้อ 7.2.8</a></li>
                 </ul>
                 <div class="progress-bar-wrapper">
                     <div class="progress-bar" style="width: 0%;"></div>
@@ -878,7 +887,7 @@
                         <div class="solution-content hidden">
                             <p>การบวกจำนวนเต็มกับทศนิยมที่เป็นลบ สามารถเขียนใหม่เป็นการลบได้ ให้นำค่าสัมบูรณ์ของทั้งสองจำนวนมาลบกัน แล้วใส่เครื่องหมายตามจำนวนที่มีค่าสัมบูรณ์มากกว่า</p>
                             <p>1.  **เปลี่ยนรูปการเขียน:** $100 - 75.025$</p>
-                            <p>2.  **นำค่าสัมบูรณ์มาลบกัน (จัดทศนิยมให้ตรงกัน):**</p>
+                            <p>2.  **นำค่าสัมบูรณ์มาลบกัน (จัดทศนิยมให้ตรงกัน):</p>
                             <pre>  100.000
 -  75.025
 ---------
@@ -1092,6 +1101,233 @@
                     </div>
                 </article>
 
+                <hr>
+                <h2>แบบฝึกหัด 7.2: การบวกและลบทศนิยม (โจทย์ผสม)</h2>
+                <hr>
+
+                <article class="question-block" id="question-7-2-1">
+                    <h2 class="question-number">ข้อ 7.2.1</h2>
+                    <div class="problem">
+                        <p>$(-5.2+8)-2.8$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**เริ่มจากการคำนวณภายในวงเล็บแรก:** เรามี $-5.2 + 8$ ซึ่งเป็นการบวกเลขที่มีเครื่องหมายต่างกัน ให้หาผลต่างของค่าสัมบูรณ์ของตัวเลขทั้งสอง ($8 - 5.2 = 2.8$) และใช้เครื่องหมายของตัวเลขที่มีค่าสัมบูรณ์มากกว่า (คือ $8$ ซึ่งเป็นบวก) ดังนั้นจะได้ $2.8$</li>
+                                    <li>**นำผลลัพธ์ที่ได้ไปลบออกจากตัวเลขถัดไป:** เรามี $2.8 - 2.8$ ซึ่งเป็นการลบเลขที่เท่ากัน ผลลัพธ์ที่ได้คือ $0$</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $(-5.2+8)-2.8$
+                                $= (2.8)-2.8$
+                                $= 0$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{0}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-7-2-2">
+                    <h2 class="question-number">ข้อ 7.2.2</h2>
+                    <div class="problem">
+                        <p>$(-10.1+15.9)-(-3.2)$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**คำนวณภายในวงเล็บแรก:** เรามี $-10.1 + 15.9$ ซึ่งเป็นการบวกเลขที่มีเครื่องหมายต่างกัน ให้หาผลต่างของค่าสัมบูรณ์ ($15.9 - 10.1 = 5.8$) และใช้เครื่องหมายของตัวเลขที่มีค่าสัมบูรณ์มากกว่า (คือ $15.9$ ซึ่งเป็นบวก) ดังนั้นจะได้ $5.8$</li>
+                                    <li>**จัดการกับเครื่องหมายลบที่อยู่หน้าวงเล็บหลัง:** เรามี $-(-3.2)$ เมื่อเครื่องหมายลบอยู่หน้าวงเล็บที่มีตัวเลขติดลบ จะกลายเป็นบวก ดังนั้น $-(-3.2)$ จึงเท่ากับ $+3.2$</li>
+                                    <li>**นำผลลัพธ์ทั้งสองมารวมกัน:** เรานำ $5.8$ มาบวกกับ $3.2$ ($5.8 + 3.2 = 9$)</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $(-10.1+15.9)-(-3.2)$
+                                $= (5.8) - (-3.2)$
+                                $= 5.8 + 3.2$
+                                $= 9$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{9}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-7-2-3">
+                    <h2 class="question-number">ข้อ 7.2.3</h2>
+                    <div class="problem">
+                        <p>$(9.05-3.7)+12.1$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**คำนวณภายในวงเล็บแรก:** เรามี $9.05 - 3.7$ ซึ่งเป็นการลบเลขทศนิยม ได้ผลลัพธ์เป็น $5.35$</li>
+                                    <li>**นำผลลัพธ์ที่ได้ไปบวกกับตัวเลขถัดไป:** เรานำ $5.35$ มาบวกกับ $12.1$ ($5.35 + 12.1 = 17.45$)</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $(9.05-3.7)+12.1$
+                                $= (5.35)+12.1$
+                                $= 17.45$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{17.45}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-7-2-4">
+                    <h2 class="question-number">ข้อ 7.2.4</h2>
+                    <div class="problem">
+                        <p>$(8.5-11.9)+(-1.04)$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**คำนวณภายในวงเล็บแรก:** เรามี $8.5 - 11.9$ ซึ่งเป็นการลบเลขที่ตัวตั้งน้อยกว่าตัวลบ ผลลัพธ์ที่ได้จะเป็นค่าลบ ให้หาผลต่างของค่าสัมบูรณ์ ($11.9 - 8.5 = 3.4$) และใช้เครื่องหมายลบ ดังนั้นจะได้ $-3.4$</li>
+                                    <li>**นำผลลัพธ์ที่ได้ไปบวกกับตัวเลขถัดไป:** เรามี $-3.4 + (-1.04)$ ซึ่งเหมือนกับการรวมค่าลบเข้าด้วยกัน ($ -3.4 - 1.04 = -4.44$)</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $(8.5-11.9)+(-1.04)$
+                                $= (-3.4)+(-1.04)$
+                                $= -3.4 - 1.04$
+                                $= -4.44$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{-4.44}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-7-2-5">
+                    <h2 class="question-number">ข้อ 7.2.5</h2>
+                    <div class="problem">
+                        <p>$(12.6-4.4)+9.9$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**คำนวณภายในวงเล็บแรก:** เรามี $12.6 - 4.4$ ซึ่งเป็นการลบเลขทศนิยม ได้ผลลัพธ์เป็น $8.2$</li>
+                                    <li>**นำผลลัพธ์ที่ได้ไปบวกกับตัวเลขถัดไป:** เรานำ $8.2$ มาบวกกับ $9.9$ ($8.2 + 9.9 = 18.1$)</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $(12.6-4.4)+9.9$
+                                $= (8.2)+9.9$
+                                $= 18.1$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{18.1}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-7-2-6">
+                    <h2 class="question-number">ข้อ 7.2.6</h2>
+                    <div class="problem">
+                        <p>$(-7.3-6.2)-3.32$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**คำนวณภายในวงเล็บแรก:** เรามี $-7.3 - 6.2$ ซึ่งเป็นการรวมค่าลบเข้าด้วยกัน ($ -7.3 + (-6.2) $). ให้นำค่าสัมบูรณ์มารวมกัน ($7.3 + 6.2 = 13.5$) และคงเครื่องหมายลบไว้ ดังนั้นจะได้ $-13.5$</li>
+                                    <li>**นำผลลัพธ์ที่ได้ไปลบออกจากตัวเลขถัดไป:** เรามี $-13.5 - 3.32$ ซึ่งเหมือนกับการรวมค่าลบสองค่าเข้าด้วยกัน ให้นำค่าสัมบูรณ์มารวมกัน ($13.5 + 3.32 = 16.82$) และคงเครื่องหมายลบไว้ ดังนั้นจะได้ $-16.82$</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $(-7.3-6.2)-3.32$
+                                $= (-13.5)-3.32$
+                                $= -13.5 - 3.32$
+                                $= -16.82$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{-16.82}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-7-2-7">
+                    <h2 class="question-number">ข้อ 7.2.7</h2>
+                    <div class="problem">
+                        <p>$-24.5+(12.9-11.5)$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**คำนวณภายในวงเล็บหลัง:** เรามี $12.9 - 11.5$ ซึ่งเป็นการลบเลขทศนิยม ได้ผลลัพธ์เป็น $1.4$</li>
+                                    <li>**นำผลลัพธ์ที่ได้ไปบวกกับตัวเลขด้านหน้า:** เรามี $-24.5 + 1.4$ ซึ่งเป็นการบวกเลขที่มีเครื่องหมายต่างกัน ให้หาผลต่างของค่าสัมบูรณ์ ($24.5 - 1.4 = 23.1$) และใช้เครื่องหมายของตัวเลขที่มีค่าสัมบูรณ์มากกว่า (คือ $24.5$ ซึ่งเป็นลบ) ดังนั้นจะได้ $-23.1$</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $-24.5+(12.9-11.5)$
+                                $= -24.5+(1.4)$
+                                $= -24.5 + 1.4$
+                                $= -23.1$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{-23.1}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-7-2-8">
+                    <h2 class="question-number">ข้อ 7.2.8</h2>
+                    <div class="problem">
+                        <p>$20.30-(2-15.5)$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>
+                                **ขั้นตอนการแก้ปัญหาอย่างละเอียด:**
+                                <ol>
+                                    <li>**คำนวณภายในวงเล็บหลัง:** เรามี $2 - 15.5$ ซึ่งเป็นการลบเลขที่ตัวตั้งน้อยกว่าตัวลบ ผลลัพธ์ที่ได้จะเป็นค่าลบ ให้หาผลต่างของค่าสัมบูรณ์ ($15.5 - 2 = 13.5$) และใช้เครื่องหมายลบ ดังนั้นจะได้ $-13.5$</li>
+                                    <li>**จัดการกับเครื่องหมายลบที่อยู่หน้าวงเล็บหลัง:** เรามี $20.30 - (-13.5)$ เมื่อเครื่องหมายลบอยู่หน้าวงเล็บที่มีตัวเลขติดลบ จะกลายเป็นบวก ดังนั้น $20.30 - (-13.5)$ จึงเท่ากับ $20.30 + 13.5$</li>
+                                    <li>**นำผลลัพธ์ทั้งสองมารวมกัน:** เรานำ $20.30$ มาบวกกับ $13.5$ ($20.30 + 13.5 = 33.8$)</li>
+                                </ol>
+                            </p>
+                            <pre>
+                                การคำนวณ:
+                                $20.30-(2-15.5)$
+                                $= 20.30-(-13.5)$
+                                $= 20.30+13.5$
+                                $= 33.8$
+                            </pre>
+                            <p>**คำตอบ:** $\mathbf{33.8}$</p>
+                        </div>
+                    </div>
+                </article>
+
                 <div class="navigation-buttons">
                     <button class="prev-button" disabled>
                         <i class="fas fa-chevron-left"></i> ก่อนหน้า
@@ -1130,12 +1366,15 @@
 
                 // Update active state in sidebar
                 questionListItems.forEach((item, index) => {
-                    // Adjust index for sidebar to skip h4 tags, if necessary
-                    // For now, assuming questionListItems only contains actual question links
-                    if (item.querySelector('a') && item.querySelector('a').href.split('#')[1] === questionBlocks[currentQuestionIndex].id) {
-                         item.classList.add('active');
-                    } else {
-                         item.classList.remove('active');
+                    // Adjusted to find the correct question block ID for sidebar highlighting
+                    const link = item.querySelector('a');
+                    if (link) {
+                        const targetId = link.href.split('#')[1];
+                        if (targetId === questionBlocks[currentQuestionIndex].id) {
+                            item.classList.add('active');
+                        } else {
+                            item.classList.remove('active');
+                        }
                     }
                 });
 
