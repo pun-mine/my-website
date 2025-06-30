@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เฉลยแบบฝึกหัด: ทศนิยมและการบวกลบ - เฉลย Hub</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        // Configure MathJax to avoid processing hidden elements initially
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            options: {
+                ignoreHtmlClass: 'solution-content hidden' // Ignore elements with this class
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Define Custom Properties (CSS Variables) for your Tailwind Colors */
+        :root {
+            --color-battleship-gray: #939890;
+            --color-ash-gray: #a2a79e;
+            --color-mountbatten-pink: #a27e8e;
+            --color-brown-sugar: #a77464;
+            --color-redwood: #984f4a;
+            --color-burgundy: #88292f;
+            --color-caput-mortuum: #5b241f;
+            --color-bistre: #2e1e0f;
+
+            /* Assign primary/secondary/accent colors from your palette */
+            --primary-color: var(--color-burgundy); /* Burgundy for main elements */
+            --secondary-color: var(--color-redwood); /* Redwood for accents/buttons */
+            --text-color: var(--color-bistre); /* Bistre for general text for good contrast */
+            --light-text-color: var(--color-ash-gray); /* Ash gray for lighter text */
+            --bg-color: var(--color-ash-gray); /* Ash gray for subtle background */
+            --card-bg: #ffffff; /* White for card backgrounds to stand out */
+            --border-color: var(--color-battleship-gray); /* Battleship gray for borders */
+            --solution-bg: #fdf2f2; /* A very light tint based on redwood/burgundy */
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo a {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-ash-gray);
+        }
+
+        .search-box {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .search-box input {
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            width: 200px;
+            color: var(--text-color);
+        }
+
+        .search-box button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-box button:hover {
+            background-color: var(--color-redwood);
+        }
+
+        /* Breadcrumb Styles */
+        .breadcrumb {
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: var(--light-text-color);
+            background-color: var(--card-bg);
+            padding: 10px 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .breadcrumb a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Solution Container Layout */
+        .solution-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            flex: 0 0 280px;
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .question-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .question-list li {
+            margin-bottom: 8px;
+        }
+
+        .question-list a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 10px 15px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .question-list a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .question-list li.active a {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(152, 79, 74, 0.3);
+        }
+
+        /* Progress Bar */
+        .progress-bar-wrapper {
+            width: 100%;
+            background-color: var(--border-color);
+            border-radius: 5px;
+            margin-top: 20px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            width: 0%;
+            border-radius: 5px;
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Content Area Styles */
+        .content-area {
+            flex: 1;
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .content-area h1 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        /* Question Block Styles */
+        .question-block {
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            background-color: #fafafa;
+            transition: all 0.3s ease;
+        }
+
+        .question-block:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .question-number {
+            color: var(--secondary-color);
+            font-size: 1.6em;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .problem {
+            font-size: 1.15em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        /* Solution Section Styles */
+        .solution-section h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .toggle-solution-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.05em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-bottom: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toggle-solution-btn:hover {
+            background-color: var(--color-redwood);
+            transform: translateY(-2px);
+        }
+
+        .solution-content {
+            background-color: var(--solution-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 6px solid var(--primary-color);
+            font-size: 1.05em;
+            line-height: 1.7;
+            box-shadow: inset 0 0 10px rgba(136, 41, 47, 0.1);
+        }
+
+        .solution-content.hidden {
+            display: none;
+        }
+
+        .solution-content pre {
+            background-color: #f0f0f0; /* Light gray for code/calculation blocks */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; /* Allow horizontal scrolling for wide code */
+            font-family: monospace; /* Monospace font for calculations */
+            white-space: pre-wrap; /* Preserve whitespace and wrap long lines */
+        }
+
+        /* Navigation Buttons */
+        .navigation-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .navigation-buttons button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
+        }
+
+        .navigation-buttons button:hover:not(:disabled) {
+            background-color: var(--color-redwood);
+            transform: translateY(-2px);
+        }
+
+        .navigation-buttons button:disabled {
+            background-color: var(--color-mountbatten-pink);
+            cursor: not-allowed;
+            opacity: 0.7;
+            transform: none;
+        }
+
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9em;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+        }
+
+        .footer .social-links {
+            margin-top: 10px;
+        }
+
+        .footer .social-links a {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            color: var(--color-ash-gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                margin-top: 15px;
+                width: 100%;
+                justify-content: space-around;
+            }
+            .nav-links li {
+                margin-left: 0;
+            }
+            .search-box {
+                margin-top: 15px;
+                width: 100%;
+                justify-content: center;
+            }
+            .search-box input {
+                width: calc(100% - 50px);
+            }
+
+            .solution-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                position: static;
+                width: 100%;
+                max-height: none;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 10px;
+            }
+            .question-block {
+                padding: 15px;
+            }
+            .content-area {
+                padding: 20px;
+            }
+            .navigation-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .navigation-buttons button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="/">เฉลย Hub</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/subjects">วิชาทั้งหมด</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+            </ul>
+            <div class="search-box">
+                <input type="text" placeholder="ค้นหาแบบฝึกหัด หรือบทเรียน...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+        <nav class="breadcrumb">
+            <a href="/">หน้าแรก</a> &gt;
+            <a href="/math">คณิตศาสตร์</a> &gt;
+            <a href="#">ทศนิยม</a> &gt;
+            แบบฝึกหัด 5.1
+        </nav>
+
+        <section class="solution-container">
+            <aside class="sidebar">
+                <h3>สารบัญข้อ</h3>
+                <ul class="question-list">
+                    <li class="active"><a href="#question-5-1-1">ข้อ 5.1.1</a></li>
+                    <li><a href="#question-5-1-2">ข้อ 5.1.2</a></li>
+                    <li><a href="#question-5-1-3">ข้อ 5.1.3</a></li>
+                    <li><a href="#question-5-1-4">ข้อ 5.1.4</a></li>
+                    <li><a href="#question-5-1-5">ข้อ 5.1.5</a></li>
+                    <li><a href="#question-5-1-6">ข้อ 5.1.6</a></li>
+                </ul>
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar" style="width: 0%;"></div>
+                </div>
+            </aside>
+
+            <div class="content-area">
+                <h1>เฉลยแบบฝึกหัด: การบวกและลบทศนิยม</h1>
+
+                <article class="question-block" id="question-5-1-1">
+                    <h2 class="question-number">ข้อ 5.1.1</h2>
+                    <div class="problem">
+                        <p>จงหาผลลัพธ์ของ $-3.101 + 2.987$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>เมื่อมีเครื่องหมายต่างกัน ให้นำค่าสัมบูรณ์ของทั้งสองจำนวนมาลบกัน แล้วใส่เครื่องหมายตามจำนวนที่มีค่าสัมบูรณ์มากกว่า</p>
+                            <p>1.  **หาค่าสัมบูรณ์ของแต่ละจำนวน:**</p>
+                            <ul>
+                                <li>$|-3.101| = 3.101$</li>
+                                <li>$|2.987| = 2.987$</li>
+                            </ul>
+                            <p>2.  **นำค่าสัมบูรณ์มาลบกัน:**</p>
+                            <pre>  3.101
+- 2.987
+-------
+  0.114</pre>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $3.101$ มีค่าสัมบูรณ์มากกว่า $2.987$ และมีเครื่องหมายเป็นลบ ดังนั้นผลลัพธ์ที่ได้จะเป็นลบ</p>
+                            <p>**คำตอบ:** $\mathbf{-0.114}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-5-1-2">
+                    <h2 class="question-number">ข้อ 5.1.2</h2>
+                    <div class="problem">
+                        <p>จงหาผลลัพธ์ของ $-0.205 + 1.795$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>เมื่อมีเครื่องหมายต่างกัน ให้นำค่าสัมบูรณ์ของทั้งสองจำนวนมาลบกัน แล้วใส่เครื่องหมายตามจำนวนที่มีค่าสัมบูรณ์มากกว่า</p>
+                            <p>1.  **หาค่าสัมบูรณ์ของแต่ละจำนวน:**</p>
+                            <ul>
+                                <li>$|-0.205| = 0.205$</li>
+                                <li>$|1.795| = 1.795$</li>
+                            </ul>
+                            <p>2.  **นำค่าสัมบูรณ์มาลบกัน:**</p>
+                            <pre>  1.795
+- 0.205
+-------
+  1.590</pre>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $1.795$ มีค่าสัมบูรณ์มากกว่า $0.205$ และมีเครื่องหมายเป็นบวก ดังนั้นผลลัพธ์ที่ได้จะเป็นบวก</p>
+                            <p>**คำตอบ:** $\mathbf{1.590}$ หรือ $\mathbf{1.59}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-5-1-3">
+                    <h2 class="question-number">ข้อ 5.1.3</h2>
+                    <div class="problem">
+                        <p>จงหาผลลัพธ์ของ $-22.95 + (-12.081)$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>การบวกจำนวนที่มีเครื่องหมายเหมือนกัน (ทั้งคู่เป็นลบ) ให้นำค่าสัมบูรณ์ของทั้งสองจำนวนมาบวกกัน แล้วใส่เครื่องหมายลบ</p>
+                            <p>1.  **เปลี่ยนรูปการเขียน:** $-22.95 - 12.081$</p>
+                            <p>2.  **นำค่าสัมบูรณ์มาบวกกัน:**</p>
+                            <pre>  22.950
++ 12.081
+--------
+  35.031</pre>
+                            <p>3.  **ใส่เครื่องหมาย:** ใส่เครื่องหมายลบให้กับผลลัพธ์</p>
+                            <p>**คำตอบ:** $\mathbf{-35.031}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-5-1-4">
+                    <h2 class="question-number">ข้อ 5.1.4</h2>
+                    <div class="problem">
+                        <p>จงหาผลลัพธ์ของ $-36.7 + 18.925$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>เมื่อมีเครื่องหมายต่างกัน ให้นำค่าสัมบูรณ์ของทั้งสองจำนวนมาลบกัน แล้วใส่เครื่องหมายตามจำนวนที่มีค่าสัมบูรณ์มากกว่า</p>
+                            <p>1.  **หาค่าสัมบูรณ์ของแต่ละจำนวน:**</p>
+                            <ul>
+                                <li>$|-36.7| = 36.7$</li>
+                                <li>$|18.925| = 18.925$</li>
+                            </ul>
+                            <p>2.  **นำค่าสัมบูรณ์มาลบกัน (จัดทศนิยมให้ตรงกัน):**</p>
+                            <pre>  36.700
+- 18.925
+--------
+  17.775</pre>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $36.7$ มีค่าสัมบูรณ์มากกว่า $18.925$ และมีเครื่องหมายเป็นลบ ดังนั้นผลลัพธ์ที่ได้จะเป็นลบ</p>
+                            <p>**คำตอบ:** $\mathbf{-17.775}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-5-1-5">
+                    <h2 class="question-number">ข้อ 5.1.5</h2>
+                    <div class="problem">
+                        <p>จงหาผลลัพธ์ของ $100 + (-75.025)$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>การบวกจำนวนเต็มกับทศนิยมที่เป็นลบ สามารถเขียนใหม่เป็นการลบได้ ให้นำค่าสัมบูรณ์ของทั้งสองจำนวนมาลบกัน แล้วใส่เครื่องหมายตามจำนวนที่มีค่าสัมบูรณ์มากกว่า</p>
+                            <p>1.  **เปลี่ยนรูปการเขียน:** $100 - 75.025$</p>
+                            <p>2.  **นำค่าสัมบูรณ์มาลบกัน (จัดทศนิยมให้ตรงกัน):**</p>
+                            <pre>  100.000
+-  75.025
+---------
+   24.975</pre>
+                            <p>3.  **ใส่เครื่องหมาย:** เนื่องจาก $100$ มีค่าสัมบูรณ์มากกว่า $75.025$ และมีเครื่องหมายเป็นบวก ดังนั้นผลลัพธ์ที่ได้จะเป็นบวก</p>
+                            <p>**คำตอบ:** $\mathbf{24.975}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="question-block" id="question-5-1-6">
+                    <h2 class="question-number">ข้อ 5.1.6</h2>
+                    <div class="problem">
+                        <p>จงหาผลลัพธ์ของ $-72.65 + (-11.357)$</p>
+                    </div>
+                    <div class="solution-section">
+                        <h3>วิธีทำ:</h3>
+                        <button class="toggle-solution-btn">แสดงเฉลย</button>
+                        <div class="solution-content hidden">
+                            <p>การบวกจำนวนที่มีเครื่องหมายเหมือนกัน (ทั้งคู่เป็นลบ) ให้นำค่าสัมบูรณ์ของทั้งสองจำนวนมาบวกกัน แล้วใส่เครื่องหมายลบ</p>
+                            <p>1.  **เปลี่ยนรูปการเขียน:** $-72.65 - 11.357$</p>
+                            <p>2.  **นำค่าสัมบูรณ์มาบวกกัน (จัดทศนิยมให้ตรงกัน):**</p>
+                            <pre>  72.650
++ 11.357
+--------
+  84.007</pre>
+                            <p>3.  **ใส่เครื่องหมาย:** ใส่เครื่องหมายลบให้กับผลลัพธ์</p>
+                            <p>**คำตอบ:** $\mathbf{-84.007}$</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="navigation-buttons">
+                    <button class="prev-button" disabled>
+                        <i class="fas fa-chevron-left"></i> ก่อนหน้า
+                    </button>
+                    <button class="next-button">
+                        ถัดไป <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 เฉลย Hub. สงวนลิขสิทธิ์ทุกประการ.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-line"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const questionBlocks = document.querySelectorAll('.question-block');
+            const prevButton = document.querySelector('.prev-button');
+            const nextButton = document.querySelector('.next-button');
+            const questionListItems = document.querySelectorAll('.question-list li');
+            const progressBar = document.querySelector('.progress-bar');
+            let currentQuestionIndex = 0;
+
+            // Function to update UI based on currentQuestionIndex
+            const updateUI = () => {
+                // Update navigation buttons state
+                prevButton.disabled = currentQuestionIndex === 0;
+                nextButton.disabled = currentQuestionIndex === questionBlocks.length - 1;
+
+                // Update active state in sidebar
+                questionListItems.forEach((item, index) => {
+                    if (index === currentQuestionIndex) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+
+                // Scroll to the current question block
+                questionBlocks[currentQuestionIndex].scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                // Update progress bar
+                const progress = (currentQuestionIndex + 1) / questionBlocks.length * 100;
+                progressBar.style.width = `${progress}%`;
+            };
+
+            // Event Listeners for Navigation Buttons
+            nextButton.addEventListener('click', () => {
+                if (currentQuestionIndex < questionBlocks.length - 1) {
+                    currentQuestionIndex++;
+                    updateUI();
+                }
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentQuestionIndex > 0) {
+                    currentQuestionIndex--;
+                    updateUI();
+                }
+            });
+
+            // Event Listeners for Sidebar Navigation (Smooth Scroll)
+            questionListItems.forEach((item, index) => {
+                item.querySelector('a').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    currentQuestionIndex = index;
+                    updateUI();
+                });
+            });
+
+            // Event Listeners for Toggle Solution Buttons
+            document.querySelectorAll('.toggle-solution-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const solutionContent = button.nextElementSibling;
+                    if (solutionContent) {
+                        solutionContent.classList.toggle('hidden');
+                        button.textContent = solutionContent.classList.contains('hidden') ? 'แสดงเฉลย' : 'ซ่อนเฉลย';
+
+                        // Trigger MathJax typesetting ONLY when solution becomes visible
+                        if (!solutionContent.classList.contains('hidden')) {
+                            // Delay MathJax typesetting slightly to ensure elements are fully rendered
+                            setTimeout(() => {
+                                MathJax.typesetPromise([solutionContent]).then(() => {
+                                    // Optional: Adjust scroll if new content pushes it down
+                                }).catch((err) => console.log('MathJax typesetting failed:', err.message));
+                            }, 50); // Small delay
+                        }
+                    }
+                });
+            });
+
+            // Initial UI setup on page load
+            if (questionBlocks.length > 0) {
+                updateUI();
+            }
+        });
+    </script>
+</body>
+</html>
