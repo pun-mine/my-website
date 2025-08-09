@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ถามว่ากูหล่อไหม?</title>
+<title>กูหล่อไหม?</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -30,24 +30,32 @@
   }
 </style>
 <script>
-  // เช็คว่ามีพารามิเตอร์ ?fromReload=1 ใน URL หรือเปล่า
+  // เช็คว่ามีพารามิเตอร์ ?loop=1 หรือไม่
   const urlParams = new URLSearchParams(window.location.search);
-  const fromReload = urlParams.get('fromReload');
+  const isLoop = urlParams.get('loop');
 
-  if (fromReload === '1') {
-    // ถ้ามาจากการ reload เปิดแท็บใหม่ซะ
-    window.open(window.location.href, '_blank');
+  if (isLoop === '1') {
+    // ถ้าโหลดมาแล้วมี ?loop=1 ให้โหลดซ้ำอีกรอบ (วนลูป)
+    setTimeout(() => {
+      // โหลดหน้าเว็บเดิมซ้ำอีกที พร้อม ?loop=1
+      window.location.href = window.location.pathname + '?loop=1';
+    }, 1000); // หน่วงเวลา 1 วินาทีก่อนโหลดซ้ำ (จะเปลี่ยนเวลานี้ได้ตามต้องการ)
   }
 
-  function reloadWithParam() {
-    // โหลดหน้านี้อีกครั้งแต่เพิ่ม ?fromReload=1
-    window.location.href = window.location.pathname + '?fromReload=1';
+  function handleNo() {
+    // กดไม่หล่อ ให้โหลดหน้าเดิมแต่เพิ่ม ?loop=1
+    window.location.href = window.location.pathname + '?loop=1';
+  }
+
+  function handleYes() {
+    alert('ถูกต้อง! กูหล่อมาก 😎');
+    // ไม่โหลดซ้ำแล้ว หยุดที่นี่
   }
 </script>
 </head>
 <body>
   <h1>กูหล่อไหม?</h1>
-  <button id="yesBtn" onclick="alert('ถูกต้อง! กูหล่อมาก 😎')">หล่อ</button>
-  <button id="noBtn" onclick="reloadWithParam()">ไม่หล่อ</button>
+  <button id="yesBtn" onclick="handleYes()">หล่อ</button>
+  <button id="noBtn" onclick="handleNo()">ไม่หล่อ</button>
 </body>
 </html>
