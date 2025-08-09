@@ -29,24 +29,25 @@
     color: white;
   }
 </style>
+<script>
+  // เช็คว่ามีพารามิเตอร์ ?fromReload=1 ใน URL หรือเปล่า
+  const urlParams = new URLSearchParams(window.location.search);
+  const fromReload = urlParams.get('fromReload');
+
+  if (fromReload === '1') {
+    // ถ้ามาจากการ reload เปิดแท็บใหม่ซะ
+    window.open(window.location.href, '_blank');
+  }
+
+  function reloadWithParam() {
+    // โหลดหน้านี้อีกครั้งแต่เพิ่ม ?fromReload=1
+    window.location.href = window.location.pathname + '?fromReload=1';
+  }
+</script>
 </head>
 <body>
   <h1>กูหล่อไหม?</h1>
-  <button id="yesBtn">หล่อ</button>
-  <button id="noBtn">ไม่หล่อ</button>
-
-<script>
-  const noBtn = document.getElementById('noBtn');
-  const yesBtn = document.getElementById('yesBtn');
-
-  noBtn.onclick = function() {
-    // เปิดแท็บใหม่ที่หน้าเว็บเดียวกัน (ลูกโซ่)
-    window.open(window.location.href, '_blank');
-  };
-
-  yesBtn.onclick = function() {
-    alert('ถูกต้อง! กูหล่อมาก 😎');
-  };
-</script>
+  <button id="yesBtn" onclick="alert('ถูกต้อง! กูหล่อมาก 😎')">หล่อ</button>
+  <button id="noBtn" onclick="reloadWithParam()">ไม่หล่อ</button>
 </body>
 </html>
